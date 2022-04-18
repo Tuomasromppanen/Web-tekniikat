@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+}
+
+// variables
+$highlight-colour: red;
+$backgrround-colour: #efefef;
+$font-stack: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+// mixins
+@mixin theme($theme: pink) {
+    border-color: $theme;
+    h1 {
+        color: $theme;
+    }
+     ul li::before {
+    color: $theme;
+}
+}
+    
+body {
+    // variables
+    background-color: $backgrround-colour;
+    font-family: $font-stack;
+}
+
+header {
+    // mixins
+    @include theme;
+}
+
+h1 {
+    color: red;
+}
+
+main {  
+    border-top: 1px solid $highlight-colour;
+}
+
+footer {
+    // mixins
+    @include theme;
+    clear: both;
+    border-top-width: 1px solid $highlight-colour;
+    border-top-style: solid;
+    // nesting
+    span {
+        text-align: center;
+        width: 100%;
+        display: block;
+        color: pink;
+    }
+}
+ 
+.left {
+    @include theme($theme: red);
+    float: left;
+    width: 20%;
+    // nesting
+    ul {
+        list-style: none; /* Remove default bullets */
+        li::before {
+            content: "\2022";
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+      }
+}
+
+.right {
+    float: left;
+    width: 80%;
+    padding: 1rem;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color:  #000;
+}
+
