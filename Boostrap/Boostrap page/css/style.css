@@ -19,7 +19,6 @@ html {
     padding-right: 40px;
     padding-bottom: 3px;
     font-size: 28px;
-    color: #1B2025;
 }
 
 /*maisemakuva*/
@@ -118,7 +117,6 @@ span {
 
     .nav-item {
         font-size: 14px;
-        color: #1B2025;
     }
 
     strong {
