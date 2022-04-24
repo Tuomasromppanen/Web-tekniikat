@@ -1,0 +1,121 @@
+@charset "UTF-8";
+/*kotisivu.html*/
+/*html*/
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ece6e6;
+  color: #1B2025;
+}
+
+/*row*/
+.row {
+  background-color: #ece6e6;
+}
+
+/*.navbar {
+    background-color: $background-color;
+}*/
+.nav-item {
+  padding-right: 40px;
+  padding-bottom: 3px;
+  font-size: 28px;
+}
+
+/*maisemakuva*/
+.wallpaper {
+  background-image: url("/images/camera-11307313.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+.wallpaper h2 {
+  padding-top: 20vh;
+  font-size: 80px;
+}
+.wallpaper p {
+  font-size: 20px;
+}
+
+/*article*/
+h1 {
+  font-weight: bold;
+  font-size: 28px;
+}
+
+/*footer*/
+table, th, td {
+  font-size: 20px;
+  padding-right: 60px;
+  padding-bottom: 6px;
+}
+
+footer {
+  display: flex;
+}
+footer img {
+  width: 400px;
+  padding: 10px;
+  filter: invert(1);
+  float: right;
+}
+
+div {
+  flex-grow: 5;
+}
+
+/*valokuvat.html*/
+/*elementtien välit*/
+#mountain, #lake, #boat, #sunset, #building {
+  background-image: cover;
+  padding-right: 0.1em;
+  padding-left: 0.1em;
+  width: 100%;
+}
+
+/*yhteystiedot.html*/
+.accordion-button::after {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.accordion-body {
+  padding-top: 20px;
+  padding-bottom: 0px;
+}
+
+p {
+  font-size: 20px;
+}
+
+span {
+  font-weight: bold;
+}
+
+/*fonttien responsointi*/
+@media screen and (max-width: 992px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  th, td {
+    font-size: 14px;
+  }
+
+  .nav-item {
+    font-size: 14px;
+  }
+
+  strong {
+    font-size: 14px;
+  }
+}
+
+/*# sourceMappingURL=built-styles.css.map */
