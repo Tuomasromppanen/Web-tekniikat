@@ -96,6 +96,7 @@ div {
 .accordion-button::after {
     padding-top: 20px;
     padding-bottom: 10px;
+    filter: invert(0.5);
 }
 
 .accordion-body {
