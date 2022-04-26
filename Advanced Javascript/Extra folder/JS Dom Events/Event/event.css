@@ -1,0 +1,13 @@
+.important {
+    background-color: red;
+}
+
+.strong {
+    font-weight: bold;
+}
+
+div {
+    height: 200px;
+    width: 200px;
+    background-color: bisque;
+}

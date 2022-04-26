@@ -1,0 +1,16 @@
+.color {
+    background-color: orange;
+    display: inline-block;
+}
+
+.textcolor {
+    color:blue;
+}
+
+.textbg {
+    background-color: burlywood;
+}
+
+#sotu {
+    background-color: red;
+}
