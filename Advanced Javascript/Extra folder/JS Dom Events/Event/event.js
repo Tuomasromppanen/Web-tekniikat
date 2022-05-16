@@ -10,7 +10,7 @@
 
 // Elementin muttaminen klikkauksen yhteydessä
 
-    /*let button = document.getElementById("ok");
+    let button = document.getElementById("ok");
 
     button.addEventListener("mouseover", doSome);
     button.addEventListener("mouseleave", doSome);
@@ -19,23 +19,19 @@
 
     function doSome(){
         button.classList.toggle("strong");
-        }*/
+        }
 
 
 // Event target
 
-    let button = document.getElementById("header");
+    //let button = document.getElementById("header");
 
-    button.addEventListener("click", doSome);
+   // button.addEventListener("click", doSome);
     // button.addEventListener("mouseleave", doSome);
     // button.addEventListener("mouseup", doSome);
     
     /**
     * 
-    * @param {Event} event 
+    * t 
     */
     
-    function doSome(event){
-    // event.target.classList.add("strong")
-    // event.currentTarget.classList.add("strong")
-    }

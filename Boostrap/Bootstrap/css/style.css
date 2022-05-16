@@ -1,0 +1,226 @@
+body {
+    background-color: #ece6e6;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+.row {
+    margin: 12px;
+    gap: 10px;
+}
+
+div.container-fluid {
+    padding: 0px;
+}
+
+.navbar-brand {
+    width: 30vh;
+    filter: invert(0);
+    padding: 0px;
+    margin-left: 14px;
+}
+
+.wallpaper {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.200),rgba(0, 0, 0, 0.3)) , url(../logo/camera.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 60vh;
+}
+
+.wallpaper h1 {
+    font-size: 60px;
+    text-align: center;
+    padding-top: 22vh;
+    color: #FFC300
+}
+
+.wallpaper p {
+    text-align: center;
+}
+
+button.accordion-button::after {
+    filter: invert(0.5);
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+th, td {
+    padding-right: 30px;
+    font-size: 18px;
+    padding-left: 14px;
+}
+
+th {
+    color: #FFC300
+}
+
+footer {
+    display: flex;
+    align-items: center;
+}
+
+footer div {
+    flex-grow: 5;
+    text-align: right;
+}
+
+
+.navimage {
+    width: 30vh;
+    filter: invert(66%) sepia(100%) saturate(995%) hue-rotate(1deg) brightness(105%) contrast(103%);
+    margin-right: 2px;
+}
+
+/*''''''''''''''''''Ensimmäinen rivistys'''''''''''''''''''''*/
+
+.mountain, .lake, .boat, .snow, .sunset, .canon {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flexbox;
+    flex: auto;
+}
+
+.mountain {
+    background-image: url(../logo/mountain.jpg);
+    height: 45vh;
+}
+
+.lake {
+    background-image: url(../logo/lake.jpg);
+    height: 45vh;
+
+}
+
+.boat {
+    background-image: url(../logo/boat.jpg);
+    height: 45vh;
+
+}
+
+.sunset {
+    background-image: url(../logo/sunset.jpg);
+    height: 45vh;
+
+}
+
+.snow {
+    background-image: url(../logo/snow.jpg);
+    height: 45vh;
+}
+
+.canon {
+    background-image: url(../logo/canon.jpg);
+    height: 45vh;
+}
+
+div.row.photos {
+    margin: 12px;
+    gap: 20px;
+}
+
+/*''''''''''''''''''Toinen rivistys'''''''''''''''''''''*/
+
+
+
+div#navbarNav {
+    margin-right: 60px;
+}
+
+button.btn.btn {
+    margin-right: 14px;
+}
+
+button.navbar-toggler {
+    margin-right: 14px;
+}
+
+div.row.and {
+    margin:0px;
+}
+
+/*''''''''''''''''''Kolmas rivistys'''''''''''''''''''''*/
+
+button.position {
+    position: static;
+}
+
+.mrwhite:hover {
+    color: white;
+    margin: 3px 3px;
+    transition: 0.5s;
+    transform: (0.5);
+}
+
+span {
+    visibility: hidden;
+    color: white;
+}
+
+.visibility {
+    visibility: visible;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/*''''''''''''''''''Neljäs rivistys'''''''''''''''''''''*/
+
+/*[class^="col"] {
+    border: 1px solid black;
+}*/
+
+@media only screen and (max-width: 992px) {
+    body {
+      font-size: 14px;
+    }
+
+    .sticky {
+        position: -webkit-sticky;
+        position: sticky;
+        z-index: 1;
+        top: 0;
+    }
+
+    .wallpaper h1 {
+        font-size: 50px;
+    }
+
+    th, td {
+        font-size: 14px;
+        padding-left: 8px;
+    }
+
+    a.nav-link {
+        margin-left: 14px;
+    }
+
+    div.container {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .row {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    div.row.photos {
+        margin: 0px;
+        gap: 10px;
+    }
+
+    .mrwhite:hover {
+        color: white;
+        margin: 0.1px 0.1px;
+        transition: 0.3s;
+        transform: (0.5);
+    }
+
+  }

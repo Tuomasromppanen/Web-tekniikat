@@ -1,0 +1,487 @@
+// variablen määrittelyä
+
+    $background-color: #ece6e6;
+    $orange: #FFC300;
+    $black: #1b2025;
+    $white: white;
+    $font-style: Arial, Helvetica, sans-serif;
+    $font-desktop: 16px;
+    $font-tablet-mobile: 14px;
+    $heading: 20px;
+
+// mixin määrittelyä
+
+@mixin margin-desktop {
+    margin: 20px 40px 20px 40px;
+    gap: 3px;
+}
+
+@mixin margin-tablet-mobile {
+    margin: 0px;
+    gap: 10px;
+}
+
+// pohjarakenne
+
+body {
+    background-color: $background-color;
+    font-family: $font-style;
+    font-size: $font-desktop;
+}
+
+// row marginit ylätunnisteelle
+
+div.row.and {
+    margin:0px;
+}
+
+// row marginit muille elementeille
+
+.row {
+    @include margin-desktop
+}
+
+// nav barin asettelun p-0 bootrap ominaisuudelta
+
+div.container-fluid {
+    padding: 0px;
+}
+
+// navigointipalkin brändi
+
+.navbar-brand {
+    width: 30vh;
+    filter: invert(0);
+    padding: 0px;
+    margin-left: 40px;
+}
+
+button.navbar-toggler {
+    margin-right: 40px;
+}
+
+// taustakuva 
+
+.wallpaper {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.200),rgba(0, 0, 0, 0.3)) , url(../../logo/camera.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 60vh;
+
+h1 {
+    font-size: $heading*3;
+    text-align: center;
+    font-weight: normal;
+    padding-top: 22vh;
+    color: $orange;
+    }
+
+button {
+    display: block;
+    margin: auto;
+    }
+
+// Painikkeen manipulointi css:llä ja ja javascriptillä
+
+.button {
+    padding: 10px;
+    background-color: $black;
+    border: none;
+    color: $white;
+    border-radius: 20px/50px;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.button:hover {
+    background-color: $orange;
+    color: $black;
+}  
+}
+
+// video
+
+#article h1 {
+    font-size: $heading+10;
+}
+
+video {
+    width: 60%;
+    height: auto;
+}
+
+#blog > a:nth-child(3):hover {
+    color: $black;
+    text-decoration: underline;
+}
+
+// accordion-painikkeen nuolen filterointi
+
+button.accordion-button::after {
+    filter: invert(0.5);
+}
+
+// accordion otsikko
+
+h2 {
+    font-size: $heading;
+    font-weight: bold;
+}
+
+// accordion painikkeen position contollointi
+
+button.position {
+    position: static;
+}
+
+// footterin määrittelyä
+
+th, td {
+    padding: 5px 30px 0px 40px;
+    font-size: $font-desktop;
+}
+
+th {
+    color: $orange;
+}
+
+// footterin määrittelyä
+
+footer {
+    display: flex;
+    align-items: center;
+    padding: 30px 0px 30px 0px;
+    div {
+        flex-grow: 5;
+        text-align: right;
+    }
+    img {
+        width: 30vh;
+        filter: invert(66%) sepia(100%) saturate(995%) hue-rotate(1deg) brightness(105%) contrast(103%);
+        margin-right: 40px;
+    }
+}
+
+// Valokuvien layout 
+
+.mountain, .lake, .boat, .snow, .sunset {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flexbox;
+    flex: auto;
+}
+
+.mountain {
+    background-image: url(../../logo/mountain.jpg);
+    height: 45vh;
+}
+
+.lake {
+    background-image: url(../../logo/lake.jpg);
+    height: 45vh;
+
+}
+
+.boat {
+    background-image: url(../../logo/boat.jpg);
+    height: 45vh;
+
+}
+
+.sunset {
+    background-image: url(../../logo/sunset.jpg);
+    height: 45vh;
+
+}
+
+.snow {
+    background-image: url(../../logo/snow.jpg);
+    height: 45vh;
+}
+
+// välistyksien asettaminen kuvien layoutille
+
+div.row.photos {
+    gap: 10px;
+}
+
+// kuvakkeiden klikkauksien tapahtuminen ja mukana on javascriptin manipulointi
+
+.img-window {
+    width: 100vw;
+    height: 100vh;
+    background-color: $black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    cursor: zoom-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 300;
+}
+
+.img-window img {
+    max-height: 80vh;
+    max-width: 80vw;
+}
+
+// javascript event controllointi kuvien layout
+
+.mrwhite:hover {
+    color: $white;
+    cursor: zoom-in;
+    margin: 3px 3px;
+    transition: 0.5s;
+    transform: (0.5);
+}
+
+span {
+    visibility: hidden;
+    color: $white;
+}
+
+.visibility {
+    visibility: visible;
+}
+
+a {
+    text-decoration: none;
+    color: $black;
+}
+
+// mainokset
+
+.slider-container {
+    height: 55vh;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.menu {
+    position: absolute;
+    z-index: 180;
+    bottom: 0;
+    label {
+        cursor: pointer;
+        display: block;
+        width: 16px;
+        height: 16px;
+        float: left;
+        margin: 0px 0px 10px 12px;
+        background-color: bisque;
+        border-radius: 0 .2em 1em;
+    }
+    label:hover {
+        background-color: orange;
+    }
+}
+
+input[type=radio] {
+    visibility: hidden;
+}
+
+
+.slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    padding: 8em 1em 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    transition: left 0s .75s;
+}
+
+[id^="slide"]:checked + .slide {
+    left: 0;
+    z-index: 100;
+    transition: left .3s ease-out;
+  }
+
+  .slide-dot-1 {
+    background-image: url(../../logo/Poro.jpg);
+  }
+  .slide-dot-2 {
+    background-image: url(../../logo/Waterfall.jpg);
+  }
+  .slide-dot-3 {
+    background-image: url(../../logo/Bird.jpg);
+  }
+
+ #commercial h2 {
+    font-size: $heading;
+    background-color: $orange;
+    border-radius: 10px;
+    padding: 10px;
+    width: 300px;
+    text-align: left;
+    color: $black;
+    font-weight: bold;
+    + button {
+        float: left;
+        margin-top: 20px;
+    }
+}
+
+// yhteystietojen otsikointien ja tähtien targetointi
+
+h1 {
+    font-weight: bold;
+    font-size: $heading;
+}
+
+i[target] {
+    color: $orange;
+}
+
+// valintaikkuna
+
+.popup {
+    background: rgba(0,0,0,0.6);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 400;
+}
+
+.popup-content {
+    height: 300px;
+    width: 430px;
+    background-color: $orange;
+    padding: 30px 0px;
+    border-radius: 5px;
+    position: relative;
+    img {
+        margin-left: 20px;
+    }
+}
+
+input[type=text] {
+    margin: 20px 30px 10px;
+    display: block;
+    width: 50%;
+    padding: 10px;
+    background-color: $background-color;
+    border: 1px solid gray;
+}
+
+input[type=submit] {
+    border: none;
+    padding: 10px 15px;
+    color: $white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.4;
+    cursor: pointer;
+    float: left;
+    margin: 10px 30px;
+}
+
+.bi-x-lg {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+
+// valintaikkunan jälkeen kuvan koko
+
+#image {
+    width: 90vh;
+    height: 60vh;
+}
+
+  
+// sivuston responsointi
+
+@media only screen and (max-width: 600px) {
+    body {
+      font-size: $font-tablet-mobile;
+    }
+
+    .sticky {
+        position: -webkit-sticky;
+        position: sticky;
+        z-index: 200;
+        top: 0;
+    }
+
+    .wallpaper h1 {
+        font-size: $heading + 30;
+    }
+
+    th, td {
+        padding-top: 5px;
+        font-size: $font-tablet-mobile;
+        padding-left: 0px;
+    }
+
+    button.navbar-toggler {
+        margin-right: 0px;
+    }
+
+    div.container {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .navbar-brand {
+        margin: 0px;
+    }
+
+    .row {
+        @include margin-tablet-mobile
+    }
+
+    div.row.photos {
+        margin: 0px;
+        gap: 10px;
+    }
+
+    .mrwhite:hover {
+        color: $white;
+        margin: 3px 3px;
+        transition: 0.5s;
+        transform: (0.5);
+    }
+      
+      div#navbarNav {
+        margin-left:  0px !important;
+    }
+    
+  }
+
+  @media only screen and (max-width: 992px) {
+      
+    div#navbarNav {
+        margin-left: 40px;
+    }
+
+    video {
+        width: 100%;
+        height: auto;
+    }
+
+    #image {
+        width: 110vh;
+        height: 60vh;
+    }
+    
+  }
+
+
